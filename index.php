@@ -1,6 +1,6 @@
 <?php
 
-date_default_timezone_set(get_timezone()); 
+date_default_timezone_set('Europe/London'); 
 include 'GIFEncoder.class.php';
 
 if(empty($_GET["dt"])){
@@ -22,14 +22,14 @@ $delays = array();
 $cache_file = "cache/".preg_replace("/[^a-z,A-Z,0-9,_]/", "_", $time).".gif";
 
 
-$image = imagecreatefrompng('background/1.png'); // change background 
+$image = imagecreatefrompng('background/6.png'); // change background 
 $delay = 100;
 $font = array(
     'size'=>65, // font size
     'angle'=>0,
     'x-offset'=>30, // offset on x asis
     'y-offset'=>80, // offset on y asis
-    'file'=>'fonts/PT_Sans-Web-Regular.ttf', // change font (example: handsean.ttf)
+    'file'=>'fonts/NewYorkMedium-Regular.ttf', // change font (example: handsean.ttf)
     'color'=>imagecolorallocate($image, 255, 255, 255),
 );
 
